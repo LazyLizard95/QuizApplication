@@ -13,11 +13,11 @@ $(".start-btn").on('click', function(){
     
     
     nextQuestion();
-    
     startGame();
 })
 
-function nextQuestion(){
+function nextQuestion(questions){
+    $("#question").text(questions.question);
 }
 
 function startGame(){

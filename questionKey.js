@@ -18,7 +18,7 @@ const questions = [
 }
 ]
 
+const question = JSON.parse(questions);
 
-
-
+console.log(question);
 
