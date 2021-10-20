@@ -2,7 +2,7 @@ let score = 0;
 let timer = 30;
 let startedGame = false;
 let gameTimer = setInterval(startGame, 1000);
-// let possibleQuestions = [firstQuestion, secondQuestion];
+
 
 
 $(".start-btn").on('click', function(){
@@ -31,5 +31,3 @@ function startGame(){
         console.log("gameover")
     }
 }
-
-console.log(possibleQuestions);

@@ -1,11 +1,3 @@
-const firstQuestion = {
-    prompt: "Which of the following is NOT a loop?",
-    answerOne: "For",
-    answerTwo: "While",
-    answerThree: "Do-While",
-    answerFour: "For-While"
-}
-
 const secondQuestion = {
     prompt: "The function Date.now() will do which of following: ",
     answerOne: "Return the current date and time",
@@ -20,7 +12,8 @@ const questions = [
     answers: [
         { text: "For", correct: false},
         { text: "While", correct: false},
-        { text:"Peter", "lastName":"Jones"}
+        { text: "Do-While", correct: false},
+        { text: "For-While", correct: true}
     ]
 }
 ]
