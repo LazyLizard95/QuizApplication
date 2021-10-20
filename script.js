@@ -2,17 +2,22 @@ let score = 0;
 let timer = 30;
 let startedGame = false;
 let gameTimer = setInterval(startGame, 1000);
-possibleQuestions = [firstQuestion, secondQuestion];
+// let possibleQuestions = [firstQuestion, secondQuestion];
 
 
 $(".start-btn").on('click', function(){
     $(".start-btn").addClass('hide');
     startedGame = true;
+    $("#question-container").removeClass("hide");
+    
+    
+    
+    nextQuestion();
+    
     startGame();
 })
 
 function nextQuestion(){
-
 }
 
 function startGame(){
@@ -27,3 +32,4 @@ function startGame(){
     }
 }
 
+console.log(possibleQuestions);

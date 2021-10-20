@@ -14,5 +14,18 @@ const secondQuestion = {
     answerFour: "Return the current time in seconds elapsed since January 1, 1970"
 }
 
+const questions = [
+{
+    question: "Which of the following is NOT a loop?",
+    answers: [
+        { text: "For", correct: false},
+        { text: "While", correct: false},
+        { text:"Peter", "lastName":"Jones"}
+    ]
+}
+]
 
-let correctAnswers = [firstQuestion.answerFour, secondQuestion.answerThree]
+
+
+
+
