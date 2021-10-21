@@ -16,8 +16,8 @@ $(".start-btn").on('click', function(){
     startGame();
 })
 
-function nextQuestion(questions){
-    $("#question").text(questions.question);
+function nextQuestion(){
+    $("#question").text(questions[0].question);// put in for loop with answer and question
 }
 
 function startGame(){

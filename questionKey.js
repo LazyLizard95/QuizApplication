@@ -1,10 +1,10 @@
-const secondQuestion = {
-    prompt: "The function Date.now() will do which of following: ",
-    answerOne: "Return the current date and time",
-    answerTwo: "Return the current date but not time",
-    answerThree: "Return the current time in millieseconds elapsed since January 1, 1970",
-    answerFour: "Return the current time in seconds elapsed since January 1, 1970"
-}
+// const secondQuestion = {
+//     prompt: "The function Date.now() will do which of following: ",
+//     answerOne: "Return the current date and time",
+//     answerTwo: "Return the current date but not time",
+//     answerThree: "Return the current time in millieseconds elapsed since January 1, 1970",
+//     answerFour: "Return the current time in seconds elapsed since January 1, 1970"
+// }
 
 const questions = [
 {
@@ -18,7 +18,6 @@ const questions = [
 }
 ]
 
-const question = JSON.parse(questions);
 
 console.log(question);
 
