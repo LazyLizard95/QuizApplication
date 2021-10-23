@@ -11,16 +11,53 @@ const secondQuestion = {
     correctAnswer = answers[2]
 }
 
+const thirdQuestion = {
+    prompt: "",
+    answers =[],
+    correctAnswer = answers[]
+}
 
+const fourthQuestion = {
+    prompt: "",
+    answers =[],
+    correctAnswer = answers[]
+}
 
+const fifthQuestion = {
+    prompt: "",
+    answers =[],
+    correctAnswer = answers[]
+}
 
+const sixthQuestion = {
+    prompt: "",
+    answers =[],
+    correctAnswer = answers[]
+}
 
+const seventhQuestion = {
+    prompt: "",
+    answers =[],
+    correctAnswer = answers[]
+}
 
+const eigthQuestion = {
+    prompt: "",
+    answers =[],
+    correctAnswer = answers[]
+}
 
+const ninthQuestion = {
+    prompt: "",
+    answers =[],
+    correctAnswer = answers[]
+}
 
-
-
-
+const tenthQuestion = {
+    prompt: "",
+    answers =[],
+    correctAnswer = answers[]
+}
 
 
 //need array of questions
