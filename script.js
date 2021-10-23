@@ -17,22 +17,22 @@ $(".start-btn").on('click', function(){
     startGame();
 })
 
-function nextQuestion(){
-    $(".btn").on('click',function(){
-        if(correctAnswer){
+function nextQuestion(correctAnswer){
+    $(".btn").on('click',function(correctAnswer){
+        buttonId = this.id;
+        console.log(buttonId);
+        if(buttonId === correctAnswer){
             questionIndex++
             console.log(questionIndex);
-            timer + 5
-            score + 10
+            timer = timer + 5;
+            score = score + 10;
             console.log("it works")
         } else {
             questionIndex++
-            timer - 5
+            timer = timer - 5
 
         }
     })
-        
-        
 }
 
 function startGame(){
@@ -40,10 +40,11 @@ function startGame(){
     timer--
     $(".timerText").text(timer);
     }
-    if(timer === 0){
+    if(timer === 0 || timer < 0){
         clearInterval(gameTimer);
         console.log("gameover")
     }
 }
 
+console.log(correctAnswer)
 console.log(firstQuestion.prompt)

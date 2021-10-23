@@ -26,7 +26,7 @@ const fifthQuestion = {
     correctAnswer: "A loop that repeatedly makes calls to iself"
 };
 
-correctAnswer = [firstQuestion.correctAnswer, secondQuestion.correctAnswer, thirdQuestion.correctAnswer, fourthQuestion.correctAnswer, fifthQuestion.correctAnswer];
+correctAnswer = [firstQuestion.answers[3], secondQuestion.correctAnswer, thirdQuestion.correctAnswer, fourthQuestion.correctAnswer, fifthQuestion.correctAnswer];
 
 switch (questionIndex){
     case 1:
