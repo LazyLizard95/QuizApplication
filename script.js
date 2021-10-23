@@ -18,17 +18,26 @@ $(".start-btn").on('click', function(){
 })
 
 function nextQuestion(){
-    
-    
+    $(".btn").on('click',function(){
+        if(correctAnswer){
+            questionIndex++
+            console.log(questionIndex);
+            timer + 5
+            score + 10
+            console.log("it works")
+        } else {
+            questionIndex++
+            timer - 5
 
-  
-
+        }
+    })
+        
+        
 }
 
 function startGame(){
     if(startedGame){
     timer--
-    console.log(timer);
     $(".timerText").text(timer);
     }
     if(timer === 0){
@@ -36,3 +45,5 @@ function startGame(){
         console.log("gameover")
     }
 }
+
+console.log(firstQuestion.prompt)

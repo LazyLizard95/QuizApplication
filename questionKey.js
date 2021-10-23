@@ -1,31 +1,48 @@
+let questionIndex = 1;
+
 const firstQuestion = {
     prompt: "Which of the following is NOT a loop?",
-    answers = ["For", "While", "Do-While", "For-While"],
-    correctAnswer = answers[3]
+    answers:  ["For", "While", "Do-While", "For-While"],
+    correctAnswer: "For-While"
 };
-
 const secondQuestion = {
     prompt: "The function Date.now() will do which of following: ",
-    answers = ["Return the current date and time", "Return the current date but not time", "Return the current time in millieseconds elapsed since January 1, 1970", "Return the current time in seconds elapsed since January 1, 1970"],
-    correctAnswer = answers[2]
-}
-
+    answers: ["Return the current date and time", "Return the current date but not time", "Return the current time in millieseconds elapsed since January 1, 1970", "Return the current time in seconds elapsed since January 1, 1970"],
+    correctAnswer: "Return the current time in millieseconds elapsed since January 1, 1970"
+};
 const thirdQuestion = {
     prompt: "What HTML element is used to enable JavaScript?",
-    answers =["<innerHTML>", "<href = 'script.js'>", "<script>", "<script.js>"],
-    correctAnswer = answers[2]
-}
-
+    answers: ["<innerHTML>", "<href = 'script.js'>", "<script>", "<script.js>"],
+    correctAnswer: "<script>"
+};
 const fourthQuestion = {
     prompt: "What will the following code display? ('b' + 'a' + + 'a' + 'a')",
-    answers =["baNaNa", "baaa", 'Undefined', 'ba ++ aa'],
-    correctAnswer = answers[0]
-}
-
+    answers: ["baNaNa", "baaa", 'Undefined', 'ba ++ aa'],
+    correctAnswer: "baNaNa"
+};
 const fifthQuestion = {
     prompt: "What is a recursive loop?",
-    answers =["A loop with a sailor mouth", "A loop that repeatedly makes calls to iself", "A loop that doesn't function properly", "Rescursion loops do not exist"],
-    correctAnswer = answers[1]
+    answers: ["A loop with a sailor mouth", "A loop that repeatedly makes calls to iself", "A loop that doesn't function properly", "Rescursion loops do not exist"],
+    correctAnswer: "A loop that repeatedly makes calls to iself"
+};
+
+correctAnswer = [firstQuestion.correctAnswer, secondQuestion.correctAnswer, thirdQuestion.correctAnswer, fourthQuestion.correctAnswer, fifthQuestion.correctAnswer];
+
+switch (questionIndex){
+    case 1:
+        $("#question").text(firstQuestion.prompt);
+        $("#questionText1").text(firstQuestion.answers[0])
+        $("#questionText2").text(firstQuestion.answers[1])
+        $("#questionText3").text(firstQuestion.answers[2])
+        $("#questionText4").text(firstQuestion.answers[3])
+    break;
+    case 2:
+        $("#question").text(secondQuestion.prompt);
+        $("#questionText1").text(secondQuestion.answers[0])
+        $("#questionText2").text(secondQuestion.answers[1])
+        $("#questionText3").text(secondQuestion.answers[2])
+        $("#questionText4").text(secondQuestion.answers[3])
+    break;
 }
 
 // const sixthQuestion = {
