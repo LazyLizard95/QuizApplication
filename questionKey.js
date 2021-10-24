@@ -1,8 +1,8 @@
-let questionIndex = 1;
+let questionIndex = 0;
 
 const firstQuestion = {
     prompt: "Which of the following is NOT a loop?",
-    answers:  ["For", "While", "Do-While", "For-While"],
+    answers: ["For", "While", "Do-While", "For-While"],
     correctAnswer: "For-While"
 };
 const secondQuestion = {
@@ -26,26 +26,60 @@ const fifthQuestion = {
     correctAnswer: "A loop that repeatedly makes calls to iself"
 };
 
-correctAnswer = [firstQuestion.answers[3], secondQuestion.correctAnswer, thirdQuestion.correctAnswer, fourthQuestion.correctAnswer, fifthQuestion.correctAnswer];
+let correctAnswers = [firstQuestion.correctAnswer, secondQuestion.correctAnswer, thirdQuestion.correctAnswer, fourthQuestion.correctAnswer, fifthQuestion.correctAnswer];
 
-switch (questionIndex){
-    case 1:
-        $("#question").text(firstQuestion.prompt);
-        $("#questionText1").text(firstQuestion.answers[0])
-        $("#questionText2").text(firstQuestion.answers[1])
-        $("#questionText3").text(firstQuestion.answers[2])
-        $("#questionText4").text(firstQuestion.answers[3])
-    break;
-    case 2:
-        $("#question").text(secondQuestion.prompt);
-        $("#questionText1").text(secondQuestion.answers[0])
-        $("#questionText2").text(secondQuestion.answers[1])
-        $("#questionText3").text(secondQuestion.answers[2])
-        $("#questionText4").text(secondQuestion.answers[3])
-    break;
+
+function switchQuestion() {
+    switch (questionIndex) {
+        case 0: {
+            $("#question").text(firstQuestion.prompt);
+            $("#questionText1").text(firstQuestion.answers[0])
+            $("#questionText2").text(firstQuestion.answers[1])
+            $("#questionText3").text(firstQuestion.answers[2])
+            $("#questionText4").text(firstQuestion.answers[3])
+            break;
+        }
+        case 1: {
+            $("#question").text(secondQuestion.prompt);
+            $("#questionText1").text(secondQuestion.answers[0])
+            $("#questionText2").text(secondQuestion.answers[1])
+            $("#questionText3").text(secondQuestion.answers[2])
+            $("#questionText4").text(secondQuestion.answers[3])
+            break;
+        }
+        case 2: {
+            $("#question").text(thirdQuestion.prompt);
+            $("#questionText1").text(thirdQuestion.answers[0])
+            $("#questionText2").text(thirdQuestion.answers[1])
+            $("#questionText3").text(thirdQuestion.answers[2])
+            $("#questionText4").text(thirdQuestion.answers[3])
+            break;
+
+        }
+        case 3: {
+            $("#question").text(fourthQuestion.prompt);
+            $("#questionText1").text(fourthQuestion.answers[0])
+            $("#questionText2").text(fourthQuestion.answers[1])
+            $("#questionText3").text(fourthQuestion.answers[2])
+            $("#questionText4").text(fourthQuestion.answers[3])
+            break;
+
+        }
+        case 4: {
+            $("#question").text(fifthQuestion.prompt);
+            $("#questionText1").text(fifthQuestion.answers[0])
+            $("#questionText2").text(fifthQuestion.answers[1])
+            $("#questionText3").text(fifthQuestion.answers[2])
+            $("#questionText4").text(fifthQuestion.answers[3])
+            break;
+
+        }
+
+        default: gameOver();
+    }
 }
 
-// const sixthQuestion = {
+    // const sixthQuestion = {
 //     prompt: "",
 //     answers =[],
 //     correctAnswer = answers[]

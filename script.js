@@ -1,39 +1,39 @@
-let score = 0;
 let timer = 30;
 let startedGame = false;
 let gameTimer = setInterval(startGame, 1000);
 
 
-
-$(".start-btn").on('click', function(){
+const startMenu = function(){
     $(".start-btn").addClass('hide');
-    let timer = 30;
+    timer = 30;
     startedGame = true;
     $("#question-container").removeClass("hide");
     
     
     
-    nextQuestion();
+    switchQuestion();
     startGame();
-})
+}
+$(".start-btn").on('click', startMenu)
 
-function nextQuestion(correctAnswer){
-    $(".btn").on('click',function(correctAnswer){
-        buttonId = this.id;
+$(".question-btn").each(function(){
+    $(this).on('click',function(event){
+        var buttonId = event.target.textContent
         console.log(buttonId);
+        var correctAnswer = correctAnswers[questionIndex]
+        questionIndex++
         if(buttonId === correctAnswer){
-            questionIndex++
             console.log(questionIndex);
             timer = timer + 5;
-            score = score + 10;
-            console.log("it works")
+            console.log("Correct")
         } else {
-            questionIndex++
             timer = timer - 5
-
+            console.log("INCorrect")
         }
+        switchQuestion();
     })
-}
+})
+
 
 function startGame(){
     if(startedGame){
@@ -41,10 +41,16 @@ function startGame(){
     $(".timerText").text(timer);
     }
     if(timer === 0 || timer < 0){
-        clearInterval(gameTimer);
-        console.log("gameover")
+        timer = 0;
+        gameOver();
     }
 }
 
-console.log(correctAnswer)
-console.log(firstQuestion.prompt)
+
+function gameOver(){
+    $("#question-container").addClass('hide');
+    $("#gameover").removeClass('hide');
+    clearInterval(gameTimer);
+}
+
+$(".restart")
