@@ -1,16 +1,13 @@
-let timer = 30;
 let startedGame = false;
 let gameTimer = setInterval(startGame, 1000);
-
+let highScores = [];
 
 const startMenu = function(){
     $(".start-btn").addClass('hide');
+    questionIndex = 0;
     timer = 30;
     startedGame = true;
     $("#question-container").removeClass("hide");
-    
-    
-    
     switchQuestion();
     startGame();
 }
@@ -19,7 +16,6 @@ $(".start-btn").on('click', startMenu)
 $(".question-btn").each(function(){
     $(this).on('click',function(event){
         var buttonId = event.target.textContent
-        console.log(buttonId);
         var correctAnswer = correctAnswers[questionIndex]
         questionIndex++
         if(buttonId === correctAnswer){
@@ -34,7 +30,6 @@ $(".question-btn").each(function(){
     })
 })
 
-
 function startGame(){
     if(startedGame){
     timer--
@@ -46,11 +41,10 @@ function startGame(){
     }
 }
 
-
 function gameOver(){
     $("#question-container").addClass('hide');
     $("#gameover").removeClass('hide');
     clearInterval(gameTimer);
 }
 
-$(".restart")
+$(".restart").on('click', startMenu)

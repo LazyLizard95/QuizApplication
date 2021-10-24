@@ -1,5 +1,3 @@
-let questionIndex = 0;
-
 const firstQuestion = {
     prompt: "Which of the following is NOT a loop?",
     answers: ["For", "While", "Do-While", "For-While"],
