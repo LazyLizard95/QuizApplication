@@ -19,8 +19,10 @@ $(".question-btn").each(function () { //question handling
         questionIndex++
         if (buttonId === correctAnswer) { //checks what was clicked and compares with correctAnswer array
             timer = timer + 5;
+            $("#response").text("Correct!")
         } else {
             timer = timer - 5;
+            $("#response").text("Incorrect!")
         }
         switchQuestion(); //re run the switch statement on questionKey.js
     })
@@ -55,10 +57,10 @@ $(".submitHighScore").on('click', function () {
     alert("Your highScore has been submitted! Thank-you!");
     $("#submit").addClass('hide');
 })
-$(".viewHighScore").on('click', function (){
+$(".viewHighScore").on('click', function () {
     $("#leaderboard").removeClass('hide');
     grabStorage();
-    
+
 })
 
 function grabStorage() {
