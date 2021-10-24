@@ -1,9 +1,10 @@
 let startedGame = false;
-let gameTimer = setInterval(startGame, 1000);
+let timer = 30;
 let highScores = [];
 
 const startMenu = function(){
     $(".start-btn").addClass('hide');
+    gameTimer = setInterval(startGame, 1000);
     questionIndex = 0;
     timer = 30;
     startedGame = true;
@@ -21,11 +22,9 @@ $(".question-btn").each(function(){
         if(buttonId === correctAnswer){
             console.log(questionIndex);
             timer = timer + 5;
-            console.log("Correct")
-        } else {
-            timer = timer - 5
-            console.log("INCorrect")
-        }
+            } else {
+            timer = timer - 5;
+            }
         switchQuestion();
     })
 })
@@ -39,6 +38,8 @@ function startGame(){
         timer = 0;
         gameOver();
     }
+    $("#gameover").addClass('hide');
+    $("#submit").removeClass('hide');
 }
 
 function gameOver(){
@@ -47,4 +48,13 @@ function gameOver(){
     clearInterval(gameTimer);
 }
 
-$(".restart").on('click', startMenu)
+$(".restart").on('click', function(){
+    $(".start-btn").removeClass('hide');
+    $("#gameover").addClass('hide');
+})
+$(".submitHighScore").on('click', function(){
+    console.log(questionIndex);
+    highScores = `${$(".userInput").value} ${timer}`;
+    alert("Your highScore has been submitted! Thank-you!");
+    $("#submit").addClass('hide');
+})
