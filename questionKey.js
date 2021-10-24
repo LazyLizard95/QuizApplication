@@ -26,7 +26,6 @@ const fifthQuestion = {
 
 let correctAnswers = [firstQuestion.correctAnswer, secondQuestion.correctAnswer, thirdQuestion.correctAnswer, fourthQuestion.correctAnswer, fifthQuestion.correctAnswer];
 
-
 function switchQuestion() {
     switch (questionIndex) {
         case 0: {
