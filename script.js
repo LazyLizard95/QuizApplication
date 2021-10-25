@@ -71,4 +71,4 @@ $(".viewHighScore").on('click', function () {
 
 //There is currently a bug where after answering the last question, your score will not update
 //this is because the question index would technically be higher then the ammount cases in the switch statement
-//
+//so the timer/score isnt visually updated before the clearinterval function is called.
