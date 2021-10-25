@@ -52,7 +52,7 @@ $(".restart").on('click', function () {
     $("#gameover").addClass('hide');
 })
 $(".submitHighScore").on('click', function () {
-    playerName = $(".userInput").value;
+    playerName = $("#userInput").value;
     let scoreObj = {
         playerName,
         timer,
@@ -65,8 +65,10 @@ $(".submitHighScore").on('click', function () {
 })
 $(".viewHighScore").on('click', function () {
     $("#leaderboard").removeClass('hide');
-    for (i = 0; i < highScoreArray.length; i++){
-    $("#leaderboard").text(highScoreArray[i].playerName + " " + highScoreArray[i].score);
-    }
+    $("#leaderboard").text(JSON.stringify(localStorage.getItem("playerScore")));
+    
 })
 
+//There is currently a bug where after answering the last question, your score will not update
+//this is because the question index would technically be higher then the ammount cases in the switch statement
+//
