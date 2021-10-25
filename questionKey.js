@@ -76,39 +76,4 @@ function switchQuestion() {
     }
 }
 
-    // const sixthQuestion = {
-//     prompt: "",
-//     answers =[],
-//     correctAnswer = answers[]
-// }
-
-// const seventhQuestion = {
-//     prompt: "",
-//     answers =[],
-//     correctAnswer = answers[]
-// }
-
-// const eigthQuestion = {
-//     prompt: "",
-//     answers =[],
-//     correctAnswer = answers[]
-// }
-
-// const ninthQuestion = {
-//     prompt: "",
-//     answers =[],
-//     correctAnswer = answers[]
-// }
-
-// const tenthQuestion = {
-//     prompt: "",
-//     answers =[],
-//     correctAnswer = answers[]
-// }
-
-
-//need array of questions
-//triggered by start quiz
-//go through index of array as each ques is answered
-//for loop w/ .length
 

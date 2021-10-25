@@ -1,6 +1,6 @@
 let startedGame = false;
 let timer = 30;
-highScoreArray = [];
+let highScoreArray = [];
 const startMenu = function () {
     $(".start-btn").addClass('hide');
     gameTimer = setInterval(startGame, 1000);
@@ -19,10 +19,10 @@ $(".question-btn").each(function () { //question handling
         questionIndex++
         if (buttonId === correctAnswer) { //checks what was clicked and compares with correctAnswer array
             timer = timer + 5;
-            $("#response").text("Correct!")
+            $("#response").text("Correct!");
         } else {
             timer = timer - 5;
-            $("#response").text("Incorrect!")
+            $("#response").text("Incorrect!");
         }
         switchQuestion(); //re run the switch statement on questionKey.js
     })
@@ -53,16 +53,20 @@ $(".restart").on('click', function () {
 })
 $(".submitHighScore").on('click', function () {
     playerName = $(".userInput").value;
-    localStorage.setItem("playerName", highScoreArray);
+    let scoreObj = {
+        playerName,
+        timer,
+    }
+    highScoreArray.push(scoreObj)
+    highScoreArray.sort(function(a,b){return b.score-a.score});
+    localStorage.setItem("playerScore", JSON.stringify(highScoreArray));
     alert("Your highScore has been submitted! Thank-you!");
     $("#submit").addClass('hide');
 })
 $(".viewHighScore").on('click', function () {
     $("#leaderboard").removeClass('hide');
-    grabStorage();
-
+    for (i = 0; i < highScoreArray.length; i++){
+    $("#leaderboard").text(highScoreArray[i].playerName + " " + highScoreArray[i].score);
+    }
 })
 
-function grabStorage() {
-    localStorage.getItem("highScoreArray");
-}
