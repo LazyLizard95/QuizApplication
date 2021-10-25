@@ -58,9 +58,9 @@ $(".submitHighScore").on('click', function () {
         timer,
     }
     highScoreArray.push(scoreObj)
-    highScoreArray.sort(function(a,b){return b.score-a.score});
+    highScoreArray.sort(function(a,b){return b.timer-a.timer});
     localStorage.setItem("playerScore", JSON.stringify(highScoreArray));
-    alert("Your highScore has been submitted! Thank-you!");
+    alert("Your HighScore has been submitted! Thank-you!");
     $("#submit").addClass('hide');
 })
 $(".viewHighScore").on('click', function () {
