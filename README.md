@@ -1,6 +1,6 @@
 # QuizApplication
  QuizApplication
-
+https://lazylizard95.github.io/QuizApplication/
 Currently features five questions in a modular quiz game made using a switch statement
 # Bugs currently: 
 1.Upon answering the last question, the timer isn't visually updated.              
