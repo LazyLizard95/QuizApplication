@@ -44,6 +44,7 @@ function startGame() { //timer function
 function gameOver() {
     $("#question-container").addClass('hide');
     $("#gameover").removeClass('hide');
+    $("#view").removeClass('hide');
     startedGame = false;
     clearInterval(gameTimer);
 }
