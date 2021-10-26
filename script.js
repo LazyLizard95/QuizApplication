@@ -49,6 +49,7 @@ function gameOver() {
 }
 $(".restart").on('click', function () {
     $(".start-btn").removeClass('hide');
+    $("#leaderboard").addClass('hide');
     $("#gameover").addClass('hide');
 })
 $(".submitHighScore").on('click', function () {
@@ -69,8 +70,9 @@ $(".viewHighScore").on('click', function () {
     let scoreObj = JSON.parse(localStorage.getItem("playerScore"));
     console.log(scoreObj[1]);
     for (i = 0; i < scoreObj.length; i++){
-    $("#leaderboard").text(scoreObj[i].playerName + scoreObj[i].timer);
-    }
+    $("#leaderboard").append(" " + scoreObj[i].playerName + ": " + scoreObj[i].timer);
+        i++;
+}
 })
 
 //There is currently a bug where after answering the last question, your score will not update
