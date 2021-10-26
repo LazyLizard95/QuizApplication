@@ -39,6 +39,7 @@ function startGame() { //timer function
     }
     $("#gameover").addClass('hide');
     $("#submit").removeClass('hide');
+    $("#view").removeClass('hide');
     $("#leaderboard").addClass('hide');
 }
 function gameOver() {
