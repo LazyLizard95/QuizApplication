@@ -73,6 +73,7 @@ $(".viewHighScore").on('click', function () {
     $("#leaderboard").append(" " + scoreObj[i].playerName + ": " + scoreObj[i].timer);
         i++;
 }
+    $("#view").addClass('hide');
 })
 
 //There is currently a bug where after answering the last question, your score will not update
