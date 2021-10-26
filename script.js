@@ -68,9 +68,9 @@ $(".viewHighScore").on('click', function () {
     $("#leaderboard").removeClass('hide');
     let scoreObj = JSON.parse(localStorage.getItem("playerScore"));
     console.log(scoreObj[1]);
-    //for (i = 0; i < scoreObj.length;){
+    for (i = 0; i < scoreObj.length; i++){
     $("#leaderboard").text(scoreObj[i].playerName + scoreObj[i].timer);
-    //}
+    }
 })
 
 //There is currently a bug where after answering the last question, your score will not update
