@@ -1,6 +1,6 @@
 let startedGame = false;
 let timer = 30;
-let highScoreArray = [];
+let highScoreArray = JSON.parse((window.localStorage.getItem("playerScore"))) || [];
 const startMenu = function () {
     $(".start-btn").addClass('hide');
     gameTimer = setInterval(startGame, 1000);
@@ -52,7 +52,8 @@ $(".restart").on('click', function () {
     $("#gameover").addClass('hide');
 })
 $(".submitHighScore").on('click', function () {
-    playerName = $("#userInput").value;
+    let playerName = $("#userInput").val();
+    console.log(playerName);
     let scoreObj = {
         playerName,
         timer,
@@ -65,8 +66,11 @@ $(".submitHighScore").on('click', function () {
 })
 $(".viewHighScore").on('click', function () {
     $("#leaderboard").removeClass('hide');
-    $("#leaderboard").text(JSON.stringify(localStorage.getItem("playerScore")));
-    
+    let scoreObj = JSON.parse(localStorage.getItem("playerScore"));
+    console.log(scoreObj[1]);
+    //for (i = 0; i < scoreObj.length;){
+    $("#leaderboard").text(scoreObj[i].playerName + scoreObj[i].timer);
+    //}
 })
 
 //There is currently a bug where after answering the last question, your score will not update
